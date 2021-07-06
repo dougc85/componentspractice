@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.heading {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.image-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: block;
+  border: none;
+  height: 7rem;
+  width: 2rem;
+  background-color: rgb(228, 228, 228);
+}
+
+.buttons:hover {
+  background-color: rgb(202, 202, 202);
+  cursor: pointer;
+}
+
+.back-button {
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.forward-button {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.frame {
+  width: 670px;
+  margin: 0 2rem;
+  overflow: hidden;
+  user-select: none;
+}
+
+.photo-strip {
+  display: flex;
+  transform: translateX(-670px);
+  transition: transform .5s;
+}
+
+.photo-container {
+  width: 670px;
+  flex-shrink: 0;
+}
+
+.photo {
+  margin: 0 auto;
+  height: 50rem;
+  display: block;
+  border-radius: 30px;
+}
+
+.image-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  margin: 1rem auto;
+}
+
+.image-option {
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(134, 134, 134);
+  opacity: .3;
+  border-radius: 50%;
+  transition: transform .5s, opacity .5s;
+  cursor: pointer;
+}
+
+.selected {
+  opacity: 1;
+  transform: scale(1.2);
+}
