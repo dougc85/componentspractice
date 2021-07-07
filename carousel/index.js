@@ -18,14 +18,14 @@ function goToImage(e) {
 
   photoOptions[currentPicture].classList.remove('selected');
 
-  const picNumber = e.target.getAttribute('data-pic');
+  const picNumber = parseInt(e.target.getAttribute('data-pic'));
   currentPicture = picNumber;
   currentPosition = currentPicture * -670 - 670;
 
   photoStrip.style.transform = `translateX(${currentPosition}px)`;
   photoOptions[currentPicture].classList.add('selected');
 
-
+  console.log(photoOptions[currentPicture]);
 }
 
 function moveBack() {
